@@ -1,58 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Echo Schedule</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Echo Schedule</title>
+<link rel="stylesheet" href="/style.css"/>
+<link rel="manifest" href="/manifest.webmanifest"/>
+<meta name="theme-color" content="#0b0b0f"/>
 </head>
 <body>
-
-  <!-- Top Status Pill -->
-  <div class="top-pill">
-    <span class="demo">🎮 DEMO MODE</span>
-    <button class="live-btn">Switch to Live</button>
-  </div>
-
-  <!-- Main Container -->
-  <div class="container">
-
-    <!-- App Title -->
-    <h1 class="title">Echo Schedule</h1>
-    <p class="subtitle">Your voice-powered calendar assistant</p>
-
-    <!-- Mic Button -->
-    <div class="mic-wrapper">
-      <button class="mic-button" id="micBtn">
-        🎤
-      </button>
-      <p class="tap-text">Tap to speak</p>
-    </div>
-
-    <!-- Meetings -->
-    <section class="meetings">
-      <h2>Today's Meetings</h2>
-
-      <div class="meeting-card">
-        <div class="time">10:00 AM</div>
-        <div class="details">
-          <div class="meeting-title">Team Standup</div>
-          <div class="meeting-sub">with Engineering Team</div>
-        </div>
-      </div>
-
-      <div class="meeting-card">
-        <div class="time">2:30 PM</div>
-        <div class="details">
-          <div class="meeting-title">Client Review</div>
-          <div class="meeting-sub">with John Tan</div>
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <script src="app.js"></script>
+<div class="top-pill">
+<span class="demo">n DEMO MODE</span>
+<button class="live-btn" id="modeBtn">Switch to Live</button>
+</div>
+<main class="container">
+<h1 class="title">Echo Schedule</h1>
+<p class="subtitle">Your voice-powered calendar assistant</p>
+<section class="mic-wrapper">
+<button class="mic-button" id="micBtn" aria-label="Speak now">n</button>
+<p class="tap-text" id="tapText">Tap to speak</p>
+<p class="transcript" id="transcript"></p>
+</section>
+<section class="meetings">
+<h2>Today's Meetings</h2>
+<div id="meetingList" class="meeting-list"></div>
+<a class="connect" href="/api/auth-start">Connect Google Calendar</a>
+</section>
+</main>
+<script src="/app.js"></script>
 </body>
 </html>
